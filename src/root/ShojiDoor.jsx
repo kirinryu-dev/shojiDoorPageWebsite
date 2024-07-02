@@ -1,5 +1,6 @@
 // ShojiDoor.js
 import React, { useState } from 'react';
+import NavBar from '../components/NavigationBar';
 import './ShojiDoors.css';
 
 const ShojiDoor = () => {
@@ -31,6 +32,7 @@ const ShojiDoor = () => {
 
   return (
     <>
+    <NavBar />
       <div className="shoji_door">
         <div className="shoji_panel panel-1" onClick={() => handlePanelClick(1)}></div>
         <div className="shoji_panel panel-2" onClick={() => handlePanelClick(2)}></div>
