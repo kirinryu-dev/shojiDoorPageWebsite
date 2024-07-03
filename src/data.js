@@ -1,34 +1,33 @@
-// custom pannel content data
+// src/data.js
 const panelData = [
-    {
-      id: 1,
-      title: 'First Impression',
-      bgImage: 'path/to/bg1.jpg',
-      hoverImage: 'path/to/hover1.jpg',
-      content: 'This is the content for the First Impression modal.',
-    },
-    {
-      id: 2,
-      title: 'Skills',
-      bgImage: 'path/to/bg2.jpg',
-      hoverImage: 'path/to/hover2.jpg',
-      content: 'This is the content for the Skills modal.',
-    },
-    {
-      id: 3,
-      title: 'Project Gallery',
-      bgImage: 'path/to/bg3.jpg',
-      hoverImage: 'path/to/hover3.jpg',
-      content: 'This is the content for the Project Gallery modal.',
-    },
-    {
-      id: 4,
-      title: 'Contact',
-      bgImage: 'path/to/bg4.jpg',
-      hoverImage: 'path/to/hover4.jpg',
-      content: 'This is the content for the Contact modal.',
-    },
-  ];
-  
-  export default panelData;
-  
+  {
+    id: 1,
+    title: 'First Impression',
+    bgImage: '/path/to/initial/image1.jpg',
+    hoverImage: '/path/to/hover/image1.jpg',
+    content: 'Content for First Impression'
+  },
+  {
+    id: 2,
+    title: 'Skills',
+    bgImage: '/path/to/initial/image2.jpg',
+    hoverImage: '/path/to/hover/image2.jpg',
+    content: 'why does it work?'
+  },
+  {
+    id: 3,
+    title: 'Project Gallery',
+    bgImage: '/path/to/initial/image3.jpg',
+    hoverImage: '/path/to/hover/image3.jpg',
+    content: 'Content for Project Gallery'
+  },
+  {
+    id: 4,
+    title: 'Contact',
+    bgImage: '/path/to/initial/image4.jpg',
+    hoverImage: '/path/to/hover/image4.jpg',
+    content: 'Content for Contact'
+  }
+];
+
+export default panelData;

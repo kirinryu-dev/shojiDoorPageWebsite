@@ -1,14 +1,15 @@
-// ShojiDoor.js
+// src/components/ShojiDoor.js
 import React, { useState } from 'react';
 import NavBar from '../components/NavigationBar';
+import panelData from '../data';
 import './ShojiDoors.css';
 
 const ShojiDoor = () => {
   const [modalContent, setModalContent] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handlePanelClick = (panelNumber) => {
-    setModalContent(`This is content for modal ${panelNumber}`);
+  const handlePanelClick = (content) => {
+    setModalContent(content);
     setIsModalOpen(true);
 
     // Trigger the door opening animation
@@ -32,12 +33,20 @@ const ShojiDoor = () => {
 
   return (
     <>
-    <NavBar />
+      <NavBar />
       <div className="shoji_door">
-        <div className="shoji_panel panel-1" onClick={() => handlePanelClick(1)}></div>
-        <div className="shoji_panel panel-2" onClick={() => handlePanelClick(2)}></div>
-        <div className="shoji_panel panel-3" onClick={() => handlePanelClick(3)}></div>
-        <div className="shoji_panel panel-4" onClick={() => handlePanelClick(4)}></div>
+        {panelData.map(panel => (
+          <div
+            key={panel.id}
+            className="shoji_panel"
+            style={{ backgroundImage: `url(${panel.bgImage})` }}
+            onClick={() => handlePanelClick(panel.content)}
+            onMouseEnter={e => e.currentTarget.style.backgroundImage = `url(${panel.hoverImage})`}
+            onMouseLeave={e => e.currentTarget.style.backgroundImage = `url(${panel.bgImage})`}
+          >
+            <div className="panel_title">{panel.title}</div>
+          </div>
+        ))}
       </div>
 
       {isModalOpen && (
