@@ -1,33 +1,42 @@
-// src/components/ShojiDoor.js
 import React, { useState } from 'react';
 import NavBar from '../components/NavigationBar';
 import panelData from '../data';
 import './ShojiDoors.css';
+import Modal from '../pages/Modal'; // Import your Modal component
+
+// Example component imports (using alias names for clarity)
+import Panel1 from '../components/Pannel1'; // Adjust the import paths as per your project structure
+import Panel2 from '../components/Pannel2';
+import Panel3 from '../components/Pannel3';
+import Panel4 from '../components/Pannel4';
 
 const ShojiDoor = () => {
-  const [modalContent, setModalContent] = useState('');
+  const [activePanel, setActivePanel] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handlePanelClick = (content) => {
-    setModalContent(content);
+  const handlePanelClick = (panel) => {
+    setActivePanel(panel.id);
     setIsModalOpen(true);
-
-    // Trigger the door opening animation
-    document.querySelectorAll('.shoji_panel').forEach((panel, index) => {
-      if (index < 2) {
-        panel.style.transform = 'translateX(-100%)';
-      } else {
-        panel.style.transform = 'translateX(100%)';
-      }
-    });
   };
 
-  const handleCloseModal = (event) => {
-    if (event.target.classList.contains('modal')) {
-      setIsModalOpen(false);
-      document.querySelectorAll('.shoji_panel').forEach((panel) => {
-        panel.style.transform = 'translateX(0)';
-      });
+  const handleCloseModal = () => {
+    setActivePanel(null);
+    setIsModalOpen(false);
+  };
+
+  // Function to render component based on activePanel state
+  const renderModalContent = () => {
+    switch (activePanel) {
+      case 1:
+        return <Panel1 />;
+      case 2:
+        return <Panel2 />;
+      case 3:
+        return <Panel3 />;
+      case 4:
+        return <Panel4 />;
+      default:
+        return null;
     }
   };
 
@@ -35,28 +44,27 @@ const ShojiDoor = () => {
     <>
       <NavBar />
       <div className="shoji_door">
-        {panelData.map(panel => (
+        {panelData.map((panel) => (
           <div
             key={panel.id}
-            className="shoji_panel"
+            className={`shoji_panel ${activePanel === panel.id ? 'active' : ''}`}
             style={{ backgroundImage: `url(${panel.bgImage})` }}
-            onClick={() => handlePanelClick(panel.content)}
-            onMouseEnter={e => e.currentTarget.style.backgroundImage = `url(${panel.hoverImage})`}
-            onMouseLeave={e => e.currentTarget.style.backgroundImage = `url(${panel.bgImage})`}
+            onClick={() => handlePanelClick(panel)}
           >
             <div className="panel_title">{panel.title}</div>
           </div>
         ))}
       </div>
 
-      {isModalOpen && (
-        <div className="modal" onClick={handleCloseModal}>
-          <div className="modal-content">
-            <span className="close-button" onClick={() => handleCloseModal({ target: { classList: { contains: () => true } } })}>&times;</span>
-            <p>{modalContent}</p>
+      {/* Render the Modal component conditionally */}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+        {isModalOpen && (
+          <div className="modal_content">
+            <span className="modal_content_closebtn" onClick={handleCloseModal}>&times;</span>
+            {renderModalContent()}
           </div>
-        </div>
-      )}
+        )}
+      </Modal>
     </>
   );
 };

@@ -23,7 +23,7 @@
   }
   
   .shoji_panel:hover {
-    background-image: url(''); /* Default hover image */
+    background-image: url('../assets/slidingDoorFrame.png'); /* Default hover image */
   }
   
   .panel_title {
@@ -33,7 +33,7 @@
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
 
-  /* modal style  */
+  modal style
   
   .modal {
     display: flex;

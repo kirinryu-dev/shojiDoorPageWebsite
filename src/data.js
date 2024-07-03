@@ -1,32 +1,37 @@
 // src/data.js
+import Panel1 from './components/Pannel1';
+import Panel2 from './components/Pannel2';
+import Panel3 from './components/Pannel3';
+import Panel4 from './components/Pannel4';
+
 const panelData = [
   {
     id: 1,
     title: 'First Impression',
     bgImage: '/path/to/initial/image1.jpg',
     hoverImage: '/path/to/hover/image1.jpg',
-    content: 'Content for First Impression'
+    content: <Panel1 /> // Replace with 'Panel1' or 'Panel2', etc., depending on your import names
   },
   {
     id: 2,
     title: 'Skills',
     bgImage: '/path/to/initial/image2.jpg',
     hoverImage: '/path/to/hover/image2.jpg',
-    content: 'why does it work?'
+    content: <Panel2 />
   },
   {
     id: 3,
     title: 'Project Gallery',
     bgImage: '/path/to/initial/image3.jpg',
     hoverImage: '/path/to/hover/image3.jpg',
-    content: 'Content for Project Gallery'
+    content: <Panel3 />
   },
   {
     id: 4,
     title: 'Contact',
     bgImage: '/path/to/initial/image4.jpg',
     hoverImage: '/path/to/hover/image4.jpg',
-    content: 'Content for Contact'
+    content: <Panel4 />
   }
 ];
 
