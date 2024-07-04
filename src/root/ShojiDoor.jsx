@@ -4,7 +4,6 @@ import panelData from '../data';
 import './ShojiDoors.css';
 import Modal from '../pages/Modal'; // Import your Modal component
 
-// Example component imports (using alias names for clarity)
 import Panel1 from '../components/Pannel1'; // Adjust the import paths as per your project structure
 import Panel2 from '../components/Pannel2';
 import Panel3 from '../components/Pannel3';
@@ -13,18 +12,28 @@ import Panel4 from '../components/Pannel4';
 const ShojiDoor = () => {
   const [activePanel, setActivePanel] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [panelState, setPanelState] = useState('idle');
 
   const handlePanelClick = (panel) => {
     setActivePanel(panel.id);
     setIsModalOpen(true);
+    setPanelState('clicked');
   };
 
   const handleCloseModal = () => {
     setActivePanel(null);
     setIsModalOpen(false);
+    setPanelState('idle');
   };
 
-  // Function to render component based on activePanel state
+  const handleMouseEnter = () => {
+    setPanelState('hover');
+  };
+
+  const handleMouseLeave = () => {
+    setPanelState('idle');
+  };
+
   const renderModalContent = () => {
     switch (activePanel) {
       case 1:
@@ -47,9 +56,11 @@ const ShojiDoor = () => {
         {panelData.map((panel) => (
           <div
             key={panel.id}
-            className={`shoji_panel ${activePanel === panel.id ? 'active' : ''}`}
+            className={`shoji_panel ${panelState}`}
             style={{ backgroundImage: `url(${panel.bgImage})` }}
             onClick={() => handlePanelClick(panel)}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             <div className="panel_title">{panel.title}</div>
           </div>

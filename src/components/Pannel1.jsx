@@ -9,7 +9,16 @@ const Pannel = () => {
   return (
     <div className='pannel'>
       <h2>First Impression Component</h2>
-      <p>This is the content for First Impression.</p>
+      <div className='impression'>
+        <div className='me-img'>
+          zara
+        </div>
+
+        <div className='about-me'>
+          kempachi
+
+        </div>
+      </div>
     </div>
   );
 };
