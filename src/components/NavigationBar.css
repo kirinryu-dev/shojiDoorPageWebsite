@@ -1,0 +1,15 @@
+/* .rajdhani-regular {
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  } */
+
+  .MuiPaper-root ,
+  .MuiBox-root ,
+  .MuiButtonBase-root  {
+    color: rgb(14, 14, 23) !important;
+    background-color: #F75049 !important;
+    border: none !important;
+    box-shadow: none !important;
+    
+  }

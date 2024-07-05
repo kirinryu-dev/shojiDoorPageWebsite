@@ -66,7 +66,7 @@ const ShojiDoor = () => {
             style={{ backgroundImage: `url(${panel.bgImage})` }}
             onClick={() => handlePanelClick(panel)}
           >
-            <div className="panel_title">{panel.title}</div>
+            <div className="panel_title rajdhani-regular">{panel.title}</div>
           </div>
         ))}
       </div>

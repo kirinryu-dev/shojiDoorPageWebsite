@@ -1,15 +1,98 @@
 .pannel {
-    color: black;
-    
-}
-
-.impression {
+    background-color: rgb(14, 14, 23) !important;
+    color: #5ef0ff !important;
     display: flex;
-    gap: 1em;
-    
+    flex-direction: column;
+    font-size: small;
+    width: 50%;
 
 }
 
-.me-img {
-    background-image: url('');
+/* summary content  */
+
+.pannel-identity {
+
+}
+
+.pannel-identity > h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.pannel-identity > p {
+    text-align: center;
+    color: #F75049 !important;
+
+}
+
+
+
+.identity-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.identity-me-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 10rem;
+    border-radius: 50%;
+}
+
+.identity-helper-container {
+    width: 50%;
+    padding-left: 1em;
+    border-left: 1px rgb(0, 0, 0) solid;
+    
+}
+
+.identity-details {
+    padding: 0.5em;
+    /* border-left: 1px red solid ; */
+
+
+}
+
+.identity-details {
+
+}
+
+.detail-content > h3 {
+    color: #F75049 !important;
+    padding-bottom: 2px;
+    border-bottom: 0.5px #F75049 solid ;
+    font-size: small;
+
+}
+
+.detail-stat-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.identity-stats {
+    width: 50%;
+}
+
+.code {
+    width: 50%;
+}
+
+.code > img {
+    width: 5rem;
+}
+
+.stats {
+    font-size: small;
+    
 }

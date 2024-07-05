@@ -8,28 +8,28 @@ const panelData = [
   {
     id: 1,
     title: 'First Impression',
-    bgImage: '/imgs/slidingDoorFrame.png',
+    bgImage: '',
     hoverImage: '/path/to/hover/image1.jpg',
     content: <Panel1 /> // Replace with 'Panel1' or 'Panel2', etc., depending on your import names
   },
   {
     id: 2,
     title: 'Skills',
-    bgImage: '/imgs/slidingDoorFrame.png',
+    bgImage: '',
     hoverImage: '/path/to/hover/image2.jpg',
     content: <Panel2 />
   },
   {
     id: 3,
     title: 'Project Gallery',
-    bgImage: '/imgs/slidingDoorFrame.png',
+    bgImage: '',
     hoverImage: '/path/to/hover/image3.jpg',
     content: <Panel3 />
   },
   {
     id: 4,
     title: 'Contact',
-    bgImage: '/imgs/slidingDoorFrame.png',
+    bgImage: '',
     hoverImage: '/path/to/hover/image4.jpg',
     content: <Panel4 />
   }
