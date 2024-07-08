@@ -1,96 +1,57 @@
-// Example: src/components/FirstImpressionComponent.js
+// src/components/Pannel.js
 import React from 'react';
+import ProjectCard from '../components/ProjectCard';
 import Me from '../assets/me-duh.png';
-import code from '../assets/code_logo_no_bg.png'
-
-// import custom css 
-
-import './Pannel.css'
+import './Pannel.css'; // Import the CSS file
 
 const Pannel = () => {
   return (
     <div className='pannel rajdhani-regular'>
-
-      {/* top content  */}
-
+      {/* Top content */}
       <div className='pannel-identity'>
-      <h2>PROJECTS SCREEN</h2>
-      <p>A bref self description about me and stuff</p>
+        <h2>PROJECTS SCREEN</h2>
+        <p>A brief self description about me and stuff</p>
       </div>
 
-      {/* bottom content  */}
-
-      <div className='identity-container'>
-
-        <div className='identity-me-container'>
-          <img src={Me} alt="kirinryu" srcset="" />
+      {/* Bottom content */}
+      <div className='project-container'>
+      <p>
+       <span>LOGO HERE - WEB DEV</span>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
+       </p>
+       
+        <div className='project-gallery'>
+          <ProjectCard 
+            title="Project 1" 
+            description="This is the first project description." 
+            image="path/to/image1.jpg" 
+          />
+          <ProjectCard 
+            title="Project 2" 
+            description="This is the second project description." 
+            image="path/to/image2.jpg" 
+          />
+          <ProjectCard 
+            title="Project 3" 
+            description="This is the third project description." 
+            image="path/to/image3.jpg" 
+          />
+          <ProjectCard 
+            title="Project 4" 
+            description="This is the fourth project description." 
+            image="path/to/image4.jpg" 
+          />
+          <ProjectCard 
+            title="Project 5" 
+            description="This is the fifth project description." 
+            image="path/to/image5.jpg" 
+          />
+          <ProjectCard 
+            title="Project 6" 
+            description="This is the sixth project description." 
+            image="path/to/image6.jpg" 
+          />
         </div>
-
-        <div className='identity-helper-container'>
-
-          <div className='identity-details'>
-            <div className='detail-container'>
-              <div className='detail-content'>
-                <h3>NAME</h3>
-                <p>TCHALIM SAM TANGUY</p>
-              </div>
-
-              <div className='detail-content'>
-                <h3>
-                  BACK STORY
-                </h3>
-                <p>
-                  <span>LOGO HERE - WEB DEV</span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
-
-                </p>
-              </div>
-
-              <div className='detail-content'>
-                <h3>Experience</h3>
-                <p> > 5 years  </p>
-
-              </div>
-
-              <div className='detail-content'>
-              <h3>TECHNICAL CAPATIBILITY </h3>
-                <div className='detail-stat-content'>
-                
-                <div className='identity-stats'>
-                    <div className="stats">1</div>
-                    <div className="stats">2</div>
-                    <div className="stats">3</div>
-                    <div className="stats">4</div>
-                    <div className="stats">5</div>
-                </div>
-
-                <div className='code'>
-                  <img src={code} alt="" />
-                </div>
-
-
-                </div>
-
-                
-
-                <div className='detail-content'>
-                  <h3>RELEVANT APPRECIATION</h3>
-                  <div>
-                    {/* here in the background will be digital data transfert like matrix in the background  */}
-                    <p>BACHELOR MARKETING STRATEGY</p>
-                    <p>FRONT END TECHNOLOGY CERTIFICAT</p>
-
-                  </div>
-                </div>
-              </div>
-              
-
-            </div>
-          </div>
-
-        </div>
-
-
       </div>
     </div>
   );

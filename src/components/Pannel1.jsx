@@ -1,13 +1,23 @@
 // Example: src/components/FirstImpressionComponent.js
 import React from 'react';
 import Me from '../assets/me-duh.png';
-import code from '../assets/code_logo_no_bg.png'
+import code from '../assets/code_logo_no_bg.png';
+
+import PsychologyIcon from '@mui/icons-material/Psychology';
+import EmojiObjectsIcon from '@mui/icons-material/EmojiObjects';
+import FeedbackIcon from '@mui/icons-material/Feedback';
+import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
+import RecommendIcon from '@mui/icons-material/Recommend';
+
 
 // import custom css 
 
 import './Pannel.css'
 
 const Pannel = () => {
+
+
+
   return (
     <div className='pannel rajdhani-regular'>
 
@@ -57,16 +67,16 @@ const Pannel = () => {
                 <div className='detail-stat-content'>
                 
                 <div className='identity-stats'>
-                    <div className="stats"><i></i><p>TECHNICAL SKILL</p></div>
-                    <div className="stats"><i></i><p>PROBLEM SOLVING</p></div>
-                    <div className="stats"><i></i><p>COMMUNICATION SKILL</p></div>
-                    <div className="stats"><i></i><p>ADAPTABILITY</p></div>
-                    <div className="stats"><i></i><p>PROFESSIONALISM</p></div>
+                    <div className="stats"><i className='stat-icon'><PsychologyIcon /></i><p>TECHNICAL SKILL</p></div>
+                    <div className="stats"><i className='stat-icon'><EmojiObjectsIcon /></i><p>PROBLEM SOLVING</p></div>
+                    <div className="stats"><i className='stat-icon'><FeedbackIcon /></i><p>COMMUNICATION SKILL</p></div>
+                    <div className="stats"><i className='stat-icon'><SettingsSuggestIcon /></i><p>ADAPTABILITY</p></div>
+                    <div className="stats"><i className='stat-icon'><RecommendIcon /></i><p>PROFESSIONALISM</p></div>
                 </div>
 
-                <div className='code'>
+                {/* <div className='code'>
                   <img src={code} alt="" />
-                </div>
+                </div> */}
 
 
                 </div>
