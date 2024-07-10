@@ -37,7 +37,7 @@ const Pannel = () => {
 
               <div className='detail-content'>
                 <h3>
-                  BACK STORY
+                  CONACT METHODE
                 </h3>
                 <p>
                   <span>LOGO HERE - WEB DEV</span>
@@ -47,27 +47,38 @@ const Pannel = () => {
               </div>
 
               <div className='detail-content'>
-                <h3>Experience</h3>
-                <p> > 5 years  </p>
 
-              </div>
+                <div className='contact-container'>
 
-              <div className='detail-content'>
-              <h3>TECHNICAL CAPATIBILITY </h3>
-                <div className='detail-stat-content'>
-                
-                <div className='identity-stats'>
-                    <div className="stats">1</div>
-                    <div className="stats">2</div>
-                    <div className="stats">3</div>
-                    <div className="stats">4</div>
-                    <div className="stats">5</div>
-                </div>
+                  <div className='methode'>
+                    <div className='meth'>
+                      <span>
+                        GMAIL
+                      </span>
 
-                <div className='code'>
-                  <img src={code} alt="" />
-                </div>
+                    </div>
 
+                    <div className='meth'>
+                      <span>
+                        LINKDN
+                      </span>
+
+                    </div>
+
+                    <div className='meth'>
+                      <span>
+                        WHATSAPP
+                      </span>
+
+                    </div>
+
+                    <div className='meth'>
+                      <span>
+                        UP TO WORK 
+
+                      </span>
+                    </div>
+                  </div>
 
                 </div>
 

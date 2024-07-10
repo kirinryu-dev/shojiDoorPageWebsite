@@ -1,5 +1,5 @@
 .pannel {
-    background-color: rgb(14, 14, 23) !important;
+    background-color: #0e0e17 !important;
     color: #5ef0ff !important;
     display: flex;
     flex-direction: column;
@@ -153,9 +153,10 @@ img {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
   }
   
-  .project-gallery {
+.project-gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; /* Changed to space-between for better alignment */
@@ -164,14 +165,14 @@ img {
     margin: 0 auto; /* Center the gallery */
   }
   
-  .project-gallery .project-card {
+.project-gallery .project-card {
     margin: 20px;
     flex: 1 1 calc(33.33% - 40px); /* Adjust for spacing, ensures 3 cards per row */
     box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
   }
   
   /* Example styles for ProjectCard component */
-  .project-card {
+.project-card {
     border: 1px solid #ddd;
     padding: 20px;
     background-color: #fff;
@@ -180,19 +181,54 @@ img {
     text-align: center;
   }
   
-  .project-card img {
+.project-card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
   }
   
-  .project-card-title {
+.project-card-title {
     margin: 10px 0;
     font-size: 1.5em;
   }
   
-  .project-card-description {
+.project-card-description {
     font-size: 1em;
     color: #666;
   }
+
+
+  /* contact screen  */
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+  }
+
+.methode {
+    text-align: center;
+    padding: 1em;
+
+  }
+
+.meth {
+    background-color: #0e0e17;
+    padding: 1.25em;
+    width: 100%;
+    border: #F75049 solid 0.5px;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+
+}
+
+.meth:hover {
+    border: none;
+    border-bottom: #F75049 solid 0.5px;
+    transition: 2ms;
+}
+
 
