@@ -1,33 +1,28 @@
-// Example: src/components/FirstImpressionComponent.js
 import React from 'react';
 import Me from '../assets/me-duh.png';
-import code from '../assets/code_logo_no_bg.png'
-
-// import custom css 
-
-import './Pannel.css'
+import './Pannel.css'; // Import the CSS file
 
 const Pannel = () => {
+
+  const handleNavigation = (url) => {
+    window.open(url, '_blank');
+  };
+
   return (
     <div className='pannel rajdhani-regular'>
-
-      {/* top content  */}
-
+      {/* Top content */}
       <div className='pannel-identity'>
-      <h2>CONTACT SCREEN</h2>
-      <p>A bref self description about me and stuff</p>
+        <h2>CONTACT SCREEN</h2>
+        <p>A brief self description about me and stuff</p>
       </div>
 
-      {/* bottom content  */}
-
+      {/* Bottom content */}
       <div className='identity-container'>
-
         <div className='identity-me-container'>
-          <img src={Me} alt="kirinryu" srcset="" />
+          <img src={Me} alt="kirinryu" />
         </div>
 
         <div className='identity-helper-container'>
-
           <div className='identity-details'>
             <div className='detail-container'>
               <div className='detail-content'>
@@ -36,72 +31,46 @@ const Pannel = () => {
               </div>
 
               <div className='detail-content'>
-                <h3>
-                  CONACT METHODE
-                </h3>
+                <h3>CONTACT METHOD</h3>
                 <p>
                   <span>LOGO HERE - WEB DEV</span>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
-
                 </p>
               </div>
 
               <div className='detail-content'>
-
                 <div className='contact-container'>
-
                   <div className='methode'>
-                    <div className='meth'>
-                      <span>
-                        GMAIL
-                      </span>
+                    <button className='meth' onClick={() => handleNavigation('mailto:your-email@example.com')}>
+                      GMAIL
+                    </button>
 
-                    </div>
+                    <button className='meth' onClick={() => handleNavigation('https://www.linkedin.com/in/your-profile')}>
+                      LINKEDIN
+                    </button>
 
-                    <div className='meth'>
-                      <span>
-                        LINKDN
-                      </span>
+                    <button className='meth' onClick={() => handleNavigation('https://wa.me/your-phone-number')}>
+                      WHATSAPP
+                    </button>
 
-                    </div>
-
-                    <div className='meth'>
-                      <span>
-                        WHATSAPP
-                      </span>
-
-                    </div>
-
-                    <div className='meth'>
-                      <span>
-                        UP TO WORK 
-
-                      </span>
-                    </div>
+                    <button className='meth' onClick={() => handleNavigation('https://www.upwork.com/freelancers/your-profile')}>
+                      UP TO WORK
+                    </button>
                   </div>
-
                 </div>
-
-                
 
                 <div className='detail-content'>
                   <h3>RELEVANT APPRECIATION</h3>
                   <div>
-                    {/* here in the background will be digital data transfert like matrix in the background  */}
+                    {/* here in the background will be digital data transfer like matrix in the background */}
                     <p>BACHELOR MARKETING STRATEGY</p>
-                    <p>FRONT END TECHNOLOGY CERTIFICAT</p>
-
+                    <p>FRONT END TECHNOLOGY CERTIFICATE</p>
                   </div>
                 </div>
               </div>
-              
-
             </div>
           </div>
-
         </div>
-
-
       </div>
     </div>
   );

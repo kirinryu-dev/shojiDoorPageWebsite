@@ -209,26 +209,37 @@ img {
 
   }
 
+
 .methode {
-    text-align: center;
-    padding: 1em;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2em;
   }
-
+  
 .meth {
+    padding: 10px;
     background-color: #0e0e17;
-    padding: 1.25em;
-    width: 100%;
-    border: #F75049 solid 0.5px;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-
-}
-
-.meth:hover {
+    color: inherit;
     border: none;
-    border-bottom: #F75049 solid 0.5px;
-    transition: 2ms;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 1em;
+  }
+  
+.meth:hover {
+    background-color: #050505;
+
 }
+
+.random-background {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border-radius: 8px;
+    white-space: pre-wrap; /* To keep spaces */
+  }
 
 
