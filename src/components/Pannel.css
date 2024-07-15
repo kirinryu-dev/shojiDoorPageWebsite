@@ -1,3 +1,5 @@
+/* Pannel Css  */
+
 .pannel {
     background-color: #0e0e17 !important;
     color: #5ef0ff !important;
@@ -9,10 +11,6 @@
 }
 
 /* summary content  */
-
-.pannel-identity {
-
-}
 
 .pannel-identity > h2 {
     display: flex;
@@ -62,8 +60,10 @@ img {
 
 }
 
-.identity-details {
+.codeImg {
+  width: 1rem;
 
+  /* height: 2rem; */
 }
 
 .detail-content > h3 {
@@ -111,14 +111,14 @@ img {
 
 .skill-container {
     width: 50%;
-    padding-left: 1em;
+    /* padding-left: 1em; */
     border-left: 1px rgb(0, 0, 0) solid;
 
 }
 
-.skill-content {
+/* .skill-content {
 
-}
+} */
 
 .tech-stack {
     display: flex;
@@ -155,30 +155,34 @@ img {
     flex-direction: column;
 
   }
+
+.project-container > p {
+  padding: 1em;
+}
   
 .project-gallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Changed to space-between for better alignment */
+    justify-content: space-between;
     width: 100%;
-    max-width: 1200px; /* Adjust based on your layout needs */
-    margin: 0 auto; /* Center the gallery */
+    max-width: 1200px; 
+    margin: 0 auto; 
   }
   
 .project-gallery .project-card {
     margin: 20px;
-    flex: 1 1 calc(33.33% - 40px); /* Adjust for spacing, ensures 3 cards per row */
-    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+    flex: 1 1 calc(33.33% - 40px);
+    box-sizing: border-box; 
   }
   
-  /* Example styles for ProjectCard component */
 .project-card {
-    border: 1px solid #ddd;
+    border: 1px solid #F75049 !important;
     padding: 20px;
-    background-color: #fff;
+    background-color: #0e0e17 !important;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     text-align: center;
+
   }
   
 .project-card img {
@@ -200,6 +204,8 @@ img {
 
   /* contact screen  */
 
+
+
 .contact-container {
     display: flex;
     justify-content: center;
@@ -207,7 +213,20 @@ img {
     flex-direction: column;
     width: 100%;
 
+    padding: 2em;
+
   }
+
+
+/* .swapPseudo:before {
+  padding: 1em;
+} */
+
+.swapPseudo:hover:after {
+  content: " ҡเ૨เɳ૨ყµ👹";
+}
+
+/*  */
 
 
 .methode {
@@ -239,51 +258,7 @@ img {
     font-family: 'Courier New', Courier, monospace;
     padding: 10px;
     border-radius: 8px;
-    white-space: pre-wrap; /* To keep spaces */
+    white-space: pre-wrap; 
   }
 
 
-
-  /* mobile or tablete marathon */
-
-  /* Mobile phones */
-@media (max-width: 600px) {
-    .pannel-identity {
-      font-size: 14px; /* Adjust font size */
-    }
-  
-    .project-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .project-gallery {
-      display: grid;
-      grid-template-columns: 1fr; /* Single column layout */
-      gap: 10px;
-    }
-  
-    .shoji_panel {
-      width: 100%;
-      height: 200px; /* Adjust height */
-    }
-  }
-  
-  /* Tablets */
-  @media (min-width: 601px) and (max-width: 900px) {
-    .project-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr; /* Two columns */
-      gap: 10px;
-    }
-  }
-  
-  /* Desktops */
-  @media (min-width: 901px) {
-    .project-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr; /* Three columns */
-      gap: 10px;
-    }
-  }
-  

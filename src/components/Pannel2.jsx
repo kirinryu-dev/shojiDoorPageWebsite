@@ -1,8 +1,9 @@
 // Example: src/components/FirstImpressionComponent.js
 import React from 'react';
-import Me from '../assets/me-duh.png';
-// import code from '../assets/code_logo_no_bg.png';
-import MyReactIcon from '../assets/react-i.png';
+import code from '../assets/code_logo_no_bg.png';
+// import Me from '../assets/me-duh.png';
+// import code from '../assets/code_logo_no_bg.png'
+// import MyReactIcon from '../assets/react-i.png';
 
 // import custom css 
 
@@ -23,9 +24,9 @@ const Pannel = () => {
 
       <div className='identity-container'>
 
-        <div className='identity-me-container'>
+        {/* <div className='identity-me-container'>
           <img src={Me} alt="kirinryu" srcset="" />
-        </div>
+        </div> */}
 
         <div className='skill-container'>
 
@@ -42,9 +43,9 @@ const Pannel = () => {
                 </h3>
 
                 <p>
-                  <span>LOGO HERE - WEB DEV</span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
-
+                  <img src={code} alt="" className='codeImg' /> - WEB DEV  
+                  I Enjoy working with react and Angular for Front-End development. On the Back-End , i like using Node.js and Django.
+                  I'm olso getting familiar with MongoDB and SQL databases and use Vite to speed up builds
                 </p>
 
 

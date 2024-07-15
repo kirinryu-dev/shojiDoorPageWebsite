@@ -1,8 +1,11 @@
-// src/components/Pannel.js
 import React from 'react';
 import ProjectCard from '../components/ProjectCard';
-import Me from '../assets/me-duh.png';
-import './Pannel.css'; // Import the CSS file
+import code from '../assets/code_logo_no_bg.png';
+
+
+// import custom css 
+
+import './Pannel.css'
 
 const Pannel = () => {
   return (
@@ -15,42 +18,52 @@ const Pannel = () => {
 
       {/* Bottom content */}
       <div className='project-container'>
-      <p>
-       <span>LOGO HERE - WEB DEV</span>
-       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
-       </p>
-       
+        <p>
+          <img src={code} alt="" className='codeImg' /> - WEB DEV
+          I've worked on projects that cover both Front-End and back-End development, building dynamic interfaces and implementing server-side functionalities.
+          I also handled databases and optimized project builds for better performance. These experiences will help me grow my skills in Full-stack development and problem-solving techniques.
+        </p>
+
         <div className='project-gallery'>
-          <ProjectCard 
-            title="Project 1" 
-            description="This is the first project description." 
-            image="path/to/image1.jpg" 
+          <ProjectCard
+            title="Task Manager APP"
+            // description="This is the first project description."
+            backgroundImage="path/to/image1.jpg"
+            link="/project1"
           />
-          <ProjectCard 
-            title="Project 2" 
-            description="This is the second project description." 
-            image="path/to/image2.jpg" 
+          <ProjectCard
+            title="Weather App"
+            // description="This is the second project description."
+            backgroundImage="path/to/image2.jpg"
+            link="/project2"
           />
-          <ProjectCard 
-            title="Project 3" 
-            description="This is the third project description." 
-            image="path/to/image3.jpg" 
+          <ProjectCard
+            title="Music Player App"
+            // description="This is the third project description."
+            backgroundImage="path/to/image3.jpg"
+            link="/project3"
           />
-          <ProjectCard 
-            title="Project 4" 
-            description="This is the fourth project description." 
-            image="path/to/image4.jpg" 
+          <ProjectCard
+            title="Dashbord App"
+            // description="This is the fourth project description."
+            backgroundImage="path/to/image4.jpg"
+            link="/project4"
           />
-          <ProjectCard 
-            title="Project 5" 
-            description="This is the fifth project description." 
-            image="path/to/image5.jpg" 
+
+          {/* <ProjectCard
+            title="Project 5"
+            description="This is the fifth project description."
+            backgroundImage="path/to/image5.jpg"
+            link="/project5"
           />
-          <ProjectCard 
-            title="Project 6" 
-            description="This is the sixth project description." 
-            image="path/to/image6.jpg" 
-          />
+          <ProjectCard
+            title="Project 6"
+            description="This is the sixth project description."
+            backgroundImage="path/to/image6.jpg"
+            link="/project6"
+          /> */}
+
+
         </div>
       </div>
     </div>

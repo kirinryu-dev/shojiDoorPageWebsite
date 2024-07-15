@@ -12,7 +12,8 @@ import RecommendIcon from '@mui/icons-material/Recommend';
 
 // import custom css 
 
-import './Pannel.css'
+import './Pannel.css';
+import './MobilePannel.css';
 
 const Pannel = () => {
 
@@ -50,15 +51,15 @@ const Pannel = () => {
                   BACK STORY
                 </h3>
                 <p>
-                  <span>LOGO HERE - WEB DEV</span>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem reprehenderit ad amet ducimus non vel distinctio, asperiores quae qui sequi!
+                  <img src={code} alt="" className='codeImg' /> - WEB DEV
+                  I'm a React developper and Marketing profetional interested in full-stack development. Invested in front-end technologies at the moment.
 
                 </p>
               </div>
 
               <div className='detail-content'>
                 <h3>Experience</h3>
-                <p> > 5 years  </p>
+                <p> 0 to 5 years  </p>
 
               </div>
 
@@ -88,7 +89,7 @@ const Pannel = () => {
                   <div>
                     {/* here in the background will be digital data transfert like matrix in the background  */}
                     <p>BACHELOR MARKETING STRATEGY</p>
-                    <p>FRONT END TECHNOLOGY CERTIFICAT</p>
+                    <p>FRONT END TECHNOLOGY CERTIFICATION</p>
 
                   </div>
                 </div>
