@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from '../components/NavigationBar';
 import panelData from '../data';
 import './ShojiDoors.css';
+import './Accordion.css';
 import Modal from '../pages/Modal';
 
 // Example component imports (using alias names for clarity)
@@ -15,6 +16,18 @@ const ShojiDoor = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [clickCount, setClickCount] = useState(0);
   const [showThankYou, setShowThankYou] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 600);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,9 +50,11 @@ const ShojiDoor = () => {
     setClickCount((prevCount) => prevCount + 1);
 
     // Trigger the door opening animation
-    document.querySelectorAll('.shoji_panel').forEach((panelElement) => {
-      panelElement.classList.add('active');
-    });
+    if (!isMobile) {
+      document.querySelectorAll('.shoji_panel').forEach((panelElement) => {
+        panelElement.classList.add('active');
+      });
+    }
   };
 
   const handleCloseModal = () => {
@@ -47,9 +62,11 @@ const ShojiDoor = () => {
     setIsModalOpen(false);
 
     // Reset the door animation
-    document.querySelectorAll('.shoji_panel').forEach((panelElement) => {
-      panelElement.classList.remove('active');
-    });
+    if (!isMobile) {
+      document.querySelectorAll('.shoji_panel').forEach((panelElement) => {
+        panelElement.classList.remove('active');
+      });
+    }
   };
 
   const handleNext = () => {
@@ -78,30 +95,39 @@ const ShojiDoor = () => {
   return (
     <>
       <NavBar />
-      <div className="shoji_door">
-        {panelData.map((panel) => (
-          <div
-            key={panel.id}
-            className={`shoji_panel ${activePanel === panel.id ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${panel.bgImage})` }}
-            onClick={() => handlePanelClick(panel)}
-          >
-            <div className="panel_title rajdhani-regular">{panel.title}</div>
-          </div>
-        ))}
-      </div>
+      {!isMobile ? (
+        <div className="shoji_door">
+          {panelData.map((panel) => (
+            <div
+              key={panel.id}
+              className={`shoji_panel ${activePanel === panel.id ? 'active' : ''}`}
+              style={{ backgroundImage: `url(${panel.bgImage})` }}
+              onClick={() => handlePanelClick(panel)}
+            >
+              <div className="panel_title rajdhani-regular">{panel.title}</div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="accordion">
+          {panelData.map((panel) => (
+            <div key={panel.id} className="accordion_item">
+              <div
+                className={`accordion_title ${activePanel === panel.id ? 'active' : ''}`}
+                onClick={() => handlePanelClick(panel)}
+              >
+                {panel.title}
+              </div>
+              <div className={`accordion_content ${activePanel === panel.id ? 'show' : ''}`}>
+                {activePanel === panel.id && renderModalContent()}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
-        onNext={handleNext}
-        onPrev={handlePrev}
-      >
-        {isModalOpen && (
-          <div className="modal_content">
-            {renderModalContent()}
-          </div>
-        )}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} onNext={handleNext} onPrev={handlePrev}>
+        {isModalOpen && <div className="modal_content">{renderModalContent()}</div>}
       </Modal>
 
       {showThankYou && (
