@@ -7,7 +7,7 @@
   }
   
   .accordion_item {
-    border: 1px solid #ddd;
+    border: 1px solid #f75049;
     border-radius: 4px;
     margin-bottom: 10px;
   }
@@ -15,8 +15,9 @@
   .accordion_title {
     padding: 15px;
     cursor: pointer;
-    background: #f1f1f1;
-    border-bottom: 1px solid #ddd;
+    background: #0e0e17;
+    color: #5ef0ff !important;
+    border-bottom: 1px solid #f75049;
   }
   
   .accordion_title.active {
@@ -26,7 +27,9 @@
   .accordion_content {
     display: none;
     padding: 15px;
-    background: #fff;
+    background: #4b4343;
+
+
   }
   
   .accordion_content.show {
@@ -38,6 +41,8 @@
     padding: 20px;
     background: #f1f1f1;
     border-top: 1px solid #ddd;
+
+
   }
   
   .thank_you_section h2 {
@@ -51,6 +56,7 @@
   
   .thank_you_section a:hover {
     text-decoration: underline;
+    
   }
   
   /* Responsive styles */

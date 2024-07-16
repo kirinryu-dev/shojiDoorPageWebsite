@@ -111,7 +111,7 @@ const ShojiDoor = () => {
       ) : (
         <div className="accordion">
           {panelData.map((panel) => (
-            <div key={panel.id} className="accordion_item">
+            <div key={panel.id} className="accordion_item rajdhani-regular">
               <div
                 className={`accordion_title ${activePanel === panel.id ? 'active' : ''}`}
                 onClick={() => handlePanelClick(panel)}

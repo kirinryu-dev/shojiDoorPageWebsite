@@ -7,7 +7,7 @@
   .MuiPaper-root ,
   .MuiBox-root ,
   .MuiButtonBase-root  {
-    color: rgb(14, 14, 23) !important;
+    color: #0e0e17 !important;
     background-color: #F75049 !important;
     border: none !important;
     box-shadow: none !important;

@@ -68,12 +68,17 @@
     .project-container {
       flex-direction: column;
       align-items: center;
+      overflow: hidden;
     }
   
     .project-gallery {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 10px;
+      gap: 1px !important;
+
+      overflow: hidden;
+      /* background-color: antiquewhite; */
+
     }
   
     .contact-container {
